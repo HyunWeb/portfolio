@@ -1,0 +1,927 @@
+@font-face {
+    font-family: 'Tenada';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    color:#212121;
+}
+body {
+    overflow: hidden;
+}
+#view { 
+    width:100vw;
+    height: 100vh;
+    overflow:hidden;
+}
+#contents{
+    height: 500%;
+    /* overflow:hidden; */
+}
+#contents > div{
+    height: 20%;
+    overflow:hidden;
+}
+
+#main , #contents{
+    width: 1200px;
+    margin: 0 auto;
+}
+#main{height: 100vh; overflow:hidden;}
+/* #main::after{content:""; clear:both; display:block;} */
+#main > div:first-child{
+    /* float:left; */
+    width: 458px;
+    height: 100vh;
+}
+#main > div:nth-child(2){
+    /* float:left; */
+    width:742px;
+    /* position: relative; */
+    height: 100vh;
+}
+#main > div:nth-child(2) > svg,
+#main > div:nth-child(2) > img{
+    position:absolute;
+}
+#grayRec{
+    top:115px;
+}
+#dotRec{
+    top:158px; left:113px;
+}
+#dotRec ~ img{
+    top:192px; left:133px; 
+}
+#dotCircle{
+    top: 324px; left: 222px;    
+}
+/* 메인 좌측 */
+#logo{
+    margin-top:40px;
+    margin-bottom:170px;
+}
+#main > div:first-child > h1{
+    font-size:60px;
+    color:#212121;
+    font-weight:bold;
+    font-family: "Tenada" , sans-serif , arial;
+    margin-bottom: 70px;
+}
+#button > button{
+    display: block;
+    border: 3px solid #572dff;
+    color: #572dff;
+    background-color:transparent;
+    cursor: pointer;
+    width: 121px;
+    height: 46px;
+    font-size:16px; 
+    font-weight: bold;
+}
+#button > button:hover{
+    background-color:#572dff;
+    color:white;
+    transition-duration: 0.3s;
+}
+#logo > a{
+    display:block;
+    width: 150px; 
+}
+
+/* 임시로 안보이게 */
+/* #main{
+    display:none;
+} */
+
+/* 프로필 페이지 */
+#profile > div{
+    float:left;
+}
+#profile::after{content:""; display:block; clear:both;}
+#profile > div:first-child{
+    width: 590px;
+}
+#profile > dic:last-child{
+    width: 610px;
+}
+
+/* 액자 */
+#profile > div:first-child > div{
+    width:460px;
+    height:566px;
+    border-radius: 40% 40% 0 0;
+    overflow:hidden;
+    margin-top:140px;
+}
+#profileImage{
+    margin-left: -90px; 
+}
+#profileR{
+    width: 610px; 
+}
+#profileR > div:first-child{
+    margin-top: 140px;
+}
+
+/* 프로필 목록  */
+#certList > ul{
+    float:left;
+}
+#certList::after{content:""; display:block; clear:both;}
+
+/* 목록 글씨 분류 */
+#certList > ul > li{
+    font-size:23px;
+    font-weight: bold;
+    color:#572dff;
+}
+.list > span:first-child{
+    color:#212121;
+}
+.liName{
+    font-size:20px;
+    color:#212121;
+}
+.liBirth, .certli > span:first-child{
+    font-size:18px; 
+    color:#212121;
+}
+.liEdu > span:first-child{
+    font-size:17px;
+}
+.liEdu > span:nth-child(2){
+    font-size:15px; 
+    color:#757575;
+}
+.liEdu > span:last-child{
+    font-size:16px;
+    color:#212121;
+}
+.certli > span:last-child{
+    font-size:16px;
+    color:#757575;
+}
+
+/* 목록 공간 정리 */
+
+/* 좌측 목록 */
+#profileR > div:first-child{
+    margin-bottom:60px;
+}
+#certList > ul:first-child{
+    width: 330px;
+}
+
+.liName, .liBirth,#liEducation{
+    width:190px;
+    float: right;
+}
+#certList > ul > li::after{content:""; display:block; clear: both;}
+#certList > ul:first-child > li{
+    margin-bottom: 30px;
+}
+#liEducation > li{
+    margin-bottom: 20px;
+}
+.liEdu > li{
+    margin-bottom:5px;
+}
+
+/* 우측 목록 */
+#detailLi{
+    margin-top:30px;
+}
+#detailLi > li{
+    margin-bottom: 20px; 
+}
+.certli > li:first-child{
+    margin-bottom:5px;
+}
+
+/* 스킬 */
+#skill > div:first-child{
+    padding-top:20px;
+    margin-bottom: 80px; 
+}
+#dataBlock{
+    width:660px; 
+    height:100px;
+    background-color:#ebebeb;
+    margin:0 auto;
+    padding:7.5px 21px;
+    box-sizing: border-box;
+}
+#dataBlock::after{content:""; display:block; clear:both;}
+#dataBlock > div{
+    width: 85px; 
+    height: 85px;
+    border-radius: 50%;
+    /* background-color: #572dff; */
+    background-color: transparent;
+    float:left;
+}
+#dataBlock > div:not(:last-child){
+    margin-right:21px; 
+}
+#dataBlock > div > div{
+    width: 70px; 
+    height: 70px; 
+    background-color:#f5f6f8;
+    border-radius: 50%;
+    margin: 7.5px auto;
+    line-height: 70px;
+    text-align: center;
+    font-size:20px; 
+    font-weight: 500;
+}
+/* 스킬 하단 */
+#skillBottom > div:first-child{
+    width: 20%;
+    float:left;
+}
+#skillBottom > div:last-child{
+    width:70%;
+    height:640px; 
+    float:left;
+    position: relative;
+    line-height: 1.3;
+}
+#skillBottom::after{content:""; display:block; clear:both;}
+
+/* 포토 일러 설명 */
+#illuList { list-style: disc}
+.skillbox > div{
+    float:left;
+}
+.skillbox > div:last-child{
+    float:right;
+}
+.skillbox::after{content:""; display:block; clear:both;}
+.photoshop{
+    width: 500px; 
+}
+.illustrator{
+    width: 600px;
+}
+.skillbox > div > img{
+    box-shadow: 3px 3px 3px #00000054;
+}
+.skillbox > div > h3{
+    font-size:25px; 
+    font-weight: bold;
+    line-height: 40px;
+    margin-top:110px; 
+    padding-left: 25px; 
+    position: relative;
+}
+.skillbox > div > h3::before{
+    content:"";
+    display:block;
+    width: 4px; 
+    height: 25px; 
+    background-color: #572dff;
+    margin-left:-10px; 
+    position: absolute;
+    top: 7.5px; 
+}
+.illustrator > div > h3::before{
+    top:15px; 
+}
+.skillbox > div > ul > li{
+    font-size: 18px; 
+    font-weight: 400;
+}
+.skillbox > div > ul > li:not(:last-child){
+    margin-bottom:5px; 
+}
+.skillbox > div > ul{
+    padding-top: 10px;
+    padding-left: 25px; 
+}
+.skillbox > div > p{
+    font-size:18px; 
+    font-weight:400;
+    padding-left: 0px; 
+}
+.illustrator > div > h3{
+    padding-left: 14px; 
+    line-height: 55px; 
+}
+.illustrator > div > ul{
+    padding-left: 40px; 
+}
+
+/* 포토 일러 박스 위치 잡기 */
+.photoshop{
+    position:absolute;
+    top:0;
+    right:-1000px;
+}
+.illustrator{
+    position:absolute;
+    left:-1000px;
+    bottom:0px; 
+}
+
+/* 아트웍 */
+
+/* 아트웍 타이틀 상단 */
+#artworkTitle > div{
+    float: left;
+    color: #212121;
+    
+}
+#artworkTitle::after {content: ""; display: block; clear: both;}
+#artworkTitle {
+    padding-top: 20px; 
+    margin-bottom: 125px;
+}
+#artworkTitle > div:first-child > h2 {
+    font-size: 60px;    
+    font-weight: bold;
+    line-height: 80px; 
+    margin-bottom:10px;
+}
+#artworkTitle > div:first-child > p{
+    font-size: 16px; 
+    font-weight: 600;
+    height: 69px;
+    line-height:1.6;
+}
+#artworkTitle > div:last-child {
+    height: 170px;
+}
+#artworkTitle > div:last-child > svg {
+    margin-top: 35px;
+}
+
+
+
+/* 아트웍 하단 갤러리  */
+
+#galleryView {
+    overflow: hidden;
+}
+/* 슬라이드 움직임 */
+.arttop {
+    margin-left:-0px;
+    margin-bottom: 40px;
+}
+.artbottom {
+    margin-left: 0%;
+}
+/* 모든 슬라이드 가로로 배치 */
+.slide {
+    /* width:3008px; */
+    width:251%;
+}
+/* 액자 틀 잡기 */
+.slide > li {
+    width: 290px;
+    height: 190px; 
+    overflow: hidden;
+    border-radius: 36px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+}
+.slide > li:not(:last-child) {
+    margin-right:12px;
+}
+.slide::after {content: ""; display: block; clear: both;}
+
+/* 이미지 위 그라디언트 */
+.slide > li::before {
+    content: "";
+    display: block;
+    width: 290px;
+    height: 190px; 
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.311) 0%, rgba(0,0,0,0) 100%);
+}
+.slide > li:hover::before{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.733) 0%, rgba(0,0,0,0) 100%);
+}
+.arttop > li > img{ display:block; }
+/* 이미지 갤러리 사진 위치 조정 */
+#image1{
+    margin-left: -70px; 
+}
+#image5{
+    margin-left: -70px; 
+}
+#image7{
+    margin-top: -70px; 
+}
+#image8{
+    margin-left: -172px; 
+}
+#image9{
+    margin-top: -70px; 
+}
+#image10{
+    margin-left: -50px; 
+} 
+/* 하단 갤러리 썸네일 위치조정 */
+#image11{
+    margin-top: -50px; 
+}
+#image12{
+    margin-left: -10px; 
+    margin-top: -10px;
+}
+#image14{
+    margin-left: -10px; 
+}
+#image15{
+    margin-top: -50px; 
+}
+#image16{
+    margin-left: -920px; 
+}
+#image17{
+    margin-top: -215px;
+    margin-left:-10px; 
+}
+#image20{
+    margin-top: -30px; 
+}
+
+/* 포트폴리오 */
+/* 타이틀 컨텐츠 수평 정렬 */
+.port {
+    float: left;
+}
+#portfolio::after {content: ""; display: block; clear: both;}
+
+/* 좌측 타이틀 설정 */
+.portLeft {
+    width: 20%;
+    height: 100%;
+    position:relative;
+}
+.portLeft > svg {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+}
+
+/* 우측 컨텐츠 설정 */
+.portRight {
+    width: 80%;
+    height: 100%;
+    position: relative;
+}
+
+ .portBox{
+    position:absolute;
+ }
+ .portcompose {
+    /* top:5%;
+    right:-100%; */
+    /* transform: translate(130%, 10%); */
+    transform: translate(400%, 10%);
+ }
+ .portstussy {
+    /* left: -100%; 
+    top: 47%;    */
+    transform: translate(-400%, 120%);
+ }
+ .porthamilton {
+    /* bottom: 10%; 
+    right: -100%; */
+    /* transform: translate(130%,250%); */
+    transform: translate(400%,250%);
+ }
+
+ .portBox > div:first-child {
+    position:absolute;
+    z-index: 10;
+    text-align: right;
+    bottom: 17%;
+    right:80%;
+    white-space: nowrap;
+    font-weight: 500;
+ }
+ .portstussy > div:first-child {
+    text-align: left;
+    right: -50%; 
+ }
+ .portBox > div:first-child > h3{
+    font-size: 30px; 
+    margin-bottom: 10px;
+}
+.portBox > div:first-child > p {
+    font-size: 17px; 
+    line-height:1.5;
+}
+.imgView {
+    width: 400px; 
+    height: 225px;
+    overflow:hidden;
+    cursor:pointer;
+}
+.imgView > a > img{transition-duration: 0.5s;}
+.imgView:hover > a > img{
+    transform: scale(120%);
+}
+.imgView > a, .imgView > a > img {
+    display:block; 
+}
+
+/* 포폴 디테일 */
+
+.detail_detail {
+    width: 322px; height: 490px;
+    position: absolute;
+    top:225px;
+    left:-100%;
+    text-align:left;
+    transition-duration: 1s;
+    opacity: 0;
+}
+/* .detailCompose, .detailStussy {display:none;} */
+
+.detail_detail > h3 {
+    font-size:30px; 
+    font-weight:500;
+    text-align: right;
+    position:relative;
+    margin-bottom: 30px; 
+}
+.detail_detail > h3 > span {
+    font-size: 40px; 
+}
+.detail_detail > h3::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 66px; 
+    background-color: #572dff;
+    position: absolute;
+    bottom:10px;
+    left:30px;
+} 
+.detail_detail > span{
+    font-size: 16px; 
+    line-height: 1.7;
+    margin-bottom: 35px;
+    display: block;
+    white-space: nowrap;
+}
+.detail_detail > span > ol {
+    list-style-type: decimal;
+    padding-left:20px; 
+}
+.detail_detail > ul {
+    font-size: 20px; 
+    font-weight: 500;
+}
+
+.detail_detail > ul > li{
+    margin-bottom: 20px;
+}
+.colorsystem > ul::after { content: ""; display: block; clear: both; }
+.colorsystem > ul > li{
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    margin-top: 10px;
+    overflow:hidden;
+    float:left;
+    margin-right: 5px;
+}
+/* 컬러 시스템 */
+/* 컴포즈 */
+.colorCompose > ul > li:nth-child(1) {
+    background-color:#fed900;
+}
+.colorCompose > ul > li:nth-child(2) {
+    background-color:#39343c;
+}
+.colorCompose > ul > li:nth-child(3) {
+    background-color:#e2e2e2;
+}
+.colorCompose > ul > li:nth-child(4) {
+    background-color:#241916;
+}
+.colorCompose > ul > li > span{
+    display:none;
+}
+/* 스투시 */
+.colorStussy > ul > li:nth-child(1) {
+    background-color:#df9916;
+}
+.colorStussy > ul > li:nth-child(2) {
+    background-color:#121212;
+}
+.colorStussy > ul > li:nth-child(3) {
+    background-color:#f1f1f1;
+    border: 1px solid #121212;
+}
+.colorStussy > ul > li > span{
+    display:none;
+}
+
+/* 해밀턴 */
+.colorHamilton > ul > li:nth-child(1) {
+    background-color:#dfdacc;
+}
+.colorHamilton > ul > li:nth-child(2) {
+    background-color:#191919;
+}
+.colorHamilton > ul > li:nth-child(3) {
+    background-color:#e36b32;
+}
+.colorHamilton > ul > li:nth-child(4) {
+    background-color:#353434;
+}
+.colorHamilton > ul > li > span{
+    display:none;
+}
+
+/* 자세히보기 버튼 */
+.detail_detail > a {
+    display: block;
+    border: 3px solid #572dff;
+    color: #572dff;
+    background-color: transparent;
+    cursor: pointer;
+    width: 121px;
+    height: 46px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 46px; 
+    text-align:center;
+}
+.detail_detail > a:hover{
+    background-color:#572dff;
+    color:white;
+    transition-duration: 0.3s;
+}
+/* .detail_detail > a {
+    display:block;
+    text-decoration: none;
+} */
+/* 닫기 버튼 */
+#detailClose{
+    opacity: 0;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    padding:0;
+    width: 52px;
+    height:52px;
+    position:absolute;
+    top: 15%; 
+    right: -20%;
+    transition-duration:0.8s;
+}
+#detailClose:hover, #overlayClose:hover {
+    transform:rotate(360deg);
+}
+
+
+/* 컨텍트 */
+#contact > div {
+    float:left;
+}
+#contact::after {
+    content: ""; display: block; clear: both;
+}
+#contact > div:first-child {
+    width: 20%;
+    height: 100%;
+    position:relative;
+}
+#contact > div:first-child > svg { 
+    position:absolute;
+    right:0;
+    bottom: 40px;
+}
+#contact > div:last-child {
+    width: 80%;
+    height: 100%;
+}
+#contactBox {
+    width: 890px; 
+    height: 380px;
+    margin: 243px 0 0 70px;
+}
+#contactBox > div, #contactBox > ul{
+    float:left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+#contactBox::after {content: ""; display: block; clear: both;}
+
+#contactBox > div > svg {
+    position:absolute;
+    left: 10px;
+    top:50%;
+    transform:translate(0,-50%);
+}
+#contactList {
+    padding-top: 30px;
+    position: relative;
+}
+#contactList > li{
+    position:relative;
+    height: 20%;
+
+    font-size: 20px; 
+    font-weight: 500;
+    line-height: 76px;
+    padding-left:160px;
+    margin-bottom: 10px;
+}
+#contactList > li:nth-child(1) {
+    background-image: url(../img/phone.svg);
+    background-repeat: no-repeat;
+    background-position: 80px 10px;
+}
+#contactList > li:nth-child(2) {
+    background-image: url(../img/mail.svg);
+    background-repeat: no-repeat;
+    background-position: 80px 10px;
+}
+#contactList > li:nth-child(3) {
+    background-image: url(../img/instragramsvg.svg);
+    background-repeat: no-repeat;
+    background-position: 80px 10px;
+}
+#contactList > li:nth-child(4) {
+    background-image: url(../img/kakaotalk.svg);
+    background-repeat: no-repeat;
+    background-position: 80px 10px;
+}
+#contactList > li > svg {
+    position:absolute;
+    left:80px;
+    top:50%;
+    transform:translate(0, -50%);
+}
+
+/* 중간 구분 선 */
+#contactList::before{
+    content:""; 
+    display:block; 
+    width: 1px; 
+    height: 374px; 
+    background-color: #000000;
+    position:absolute;
+    top:0;
+    left:-1px;
+}
+
+/* 메뉴 */
+#menu {
+    
+    transition-duration: 0.3s;
+    width: 200px; 
+    height: 100vh;
+    position:fixed;
+    right:0;
+    right:-500px;
+    top:0;
+
+    font-size: 20px;
+    font-weight: 900;
+    color: #572dff;
+}
+#menu::after {
+    content: "";
+    display: block;
+    width: 3px; 
+    height: 100%;
+    background-color:#572dff;
+    position:absolute;
+    left: 74%;
+}
+#menu > li::before {
+    content: ""; 
+    position:absolute; 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    background-color:#572dff; 
+    opacity:1;
+    right:0;
+}
+#menu > li {
+    width: 165px;
+    float: left;
+    line-height: 30px; 
+    cursor:pointer;
+
+    margin-top: 50%;
+    position: relative;
+}
+#menu > li > span{
+    transition-duration:0.3s;
+    opacity:0.3;
+}
+.menuCircle {
+    transition-duration:0.3s;
+    float:right;
+    position: absolute;
+    right: 0;
+}
+#menu > li:hover > span{
+    opacity:1;
+}
+:root{
+    --li-transform:0;
+}
+#menu > li:hover::before{
+    transition-duration:0.3s;
+    transform:scale(120%) ;
+}
+/* 배경 선 */
+.PathLine {
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:-242px;
+    z-index: -1;
+}
+.PL900 {
+    display:none;
+}
+#contents {
+    position:relative;
+}
+
+/* 초기상태 */
+#contents {
+    opacity: 0;
+    visibility: hidden;
+    transition-duration:0.5s;
+}
+/* #view {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+} */
+/* #main {
+    position:relative;
+} */
+#main {
+    /* display:none; */
+    position:absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+#main > div {
+    position: absolute;
+    top:0;
+    transition-duration:0.5s;
+}
+#main > div:first-child {
+    left:0;
+    /* left: -900px; */
+}
+#main > div:last-child {
+    right: 0;
+    /* right: -1200px;  */
+}
+#artwork{position:relative;}
+
+#overlay{
+    position:fixed;
+    top:0; left:0; right:0; bottom:0; 
+    z-index:99;
+    background-color: rgba(0,0,0,0.9);
+    cursor:pointer;
+    display:none;
+    overflow: hidden;
+}
+#overlay > img{
+    display:block;
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top:50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+#overlayClose {
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    padding:0;
+    width: 52px;
+    height:52px;
+    position:absolute;
+    top: 10%; 
+    right: 10%;
+    transition-duration:0.8s;
+}
