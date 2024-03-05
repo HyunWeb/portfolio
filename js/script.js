@@ -305,7 +305,7 @@ function rolling() {
     // 포폴 페이지
     let portCompose = document.querySelector(".portcompose");
     let portStussy = document.querySelector(".portstussy");
-    let portHamilton = document.querySelector(".porthamilton");
+    let portMelon = document.querySelector(".portMelon");
     let portBox = document.querySelectorAll(".portBox");
     let pageStop3 = 0
     let portRight = document.querySelector(".portRight")
@@ -321,7 +321,7 @@ function rolling() {
                 }
             portCompose.style.transform = "translate(130%, 10%)";
             portStussy.style.transform = "translate(10%, 120%)";
-            portHamilton.style.transform = "translate(130%,250%)";
+            portMelon.style.transform = "translate(130%,250%)";
     }, 500);}}
 
     // 스크롤 내리면 좌우에서 요소들이 등장한다. 
@@ -350,10 +350,10 @@ let detailButton = document.querySelector("#detailClose");
 
         if(this.parentElement == portCompose){
             portStussy.style.display = "none";
-            portHamilton.style.display = "none";
+            portMelon.style.display = "none";
         }else if(this.parentElement == portStussy){
             portCompose.style.display = "none";
-            portHamilton.style.display = "none";
+            portMelon.style.display = "none";
         }else{
         portStussy.style.display = "none";
         portCompose.style.display = "none";}
@@ -392,7 +392,7 @@ let detailButton = document.querySelector("#detailClose");
                 }
             portCompose.style.transform = "translate(130%, 10%) scale(100%)";
             portStussy.style.transform = "translate(10%, 120%) scale(100%)";
-            portHamilton.style.transform = "translate(130%,250%) scale(100%)";
+            portMelon.style.transform = "translate(130%,250%) scale(100%)";
     }
     let over900 = document.getElementsByClassName("over900");
 

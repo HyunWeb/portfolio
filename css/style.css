@@ -112,6 +112,7 @@ body {
 
 /* 액자 */
 #profile > div:first-child > div{
+    position: relative;
     width:460px;
     height:566px;
     border-radius: 40% 40% 0 0;
@@ -119,7 +120,9 @@ body {
     margin-top:140px;
 }
 #profileImage{
-    margin-left: -90px; 
+    width: 100%;
+    position: absolute;
+    top: -8%;
 }
 #profileR{
     width: 610px; 
@@ -492,7 +495,7 @@ body {
     top: 47%;    */
     transform: translate(-400%, 120%);
  }
- .porthamilton {
+ .portMelon {
     /* bottom: 10%; 
     right: -100%; */
     /* transform: translate(130%,250%); */
@@ -616,7 +619,7 @@ body {
 }
 /* 스투시 */
 .colorStussy > ul > li:nth-child(1) {
-    background-color:#df9916;
+    background-color:#d63600;
 }
 .colorStussy > ul > li:nth-child(2) {
     background-color:#121212;
@@ -630,19 +633,20 @@ body {
 }
 
 /* 해밀턴 */
-.colorHamilton > ul > li:nth-child(1) {
-    background-color:#dfdacc;
+.colorMelon > ul > li:nth-child(1) {
+    background-color:#04E632;
 }
-.colorHamilton > ul > li:nth-child(2) {
-    background-color:#191919;
+.colorMelon > ul > li:nth-child(2) {
+    background-color:#303030;
 }
-.colorHamilton > ul > li:nth-child(3) {
-    background-color:#e36b32;
+.colorMelon > ul > li:nth-child(3) {
+    background-color:#848484;
 }
-.colorHamilton > ul > li:nth-child(4) {
-    background-color:#353434;
+.colorMelon > ul > li:nth-child(4) {
+    background-color:#FAFAFA;
+    border: 1px solid #121212;
 }
-.colorHamilton > ul > li > span{
+.colorMelon > ul > li > span{
     display:none;
 }
 
@@ -754,7 +758,8 @@ body {
     background-position: 80px 10px;
 }
 #contactList > li:nth-child(3) {
-    background-image: url(../img/instragramsvg.svg);
+    background-size: 60px;
+    background-image: url(../img/githubLogo.png);
     background-repeat: no-repeat;
     background-position: 80px 10px;
 }
@@ -768,6 +773,11 @@ body {
     left:80px;
     top:50%;
     transform:translate(0, -50%);
+}
+#githubLink {
+    /* text-decoration: none; */
+    color: inherit;
+    cursor: pointer;
 }
 
 /* 중간 구분 선 */
