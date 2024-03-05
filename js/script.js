@@ -199,7 +199,7 @@ function rolling() {
 
         // 3,4 번 그래프
         var skill2 = window.setInterval(function(){
-            if(circledata <= 75){
+            if(circledata <= 90){
                 // 처음엔 다 돌린다. 
                 for(var rolling = 2; rolling <= 3; rolling++)  
                     datablock[rolling].style.backgroundImage = "conic-gradient(#572dff 0% "+circledata+"%, #ebebeb "+circledata+"% 100%)"
@@ -210,13 +210,24 @@ function rolling() {
 
         // 5,6 번 그래프
         var skill3 = window.setInterval(function(){
-            if(circledata <= 60){
+            if(circledata <= 85){
                 // 처음엔 다 돌린다. 
                 for(var rolling = 4; rolling <= 5; rolling++)  
                     datablock[rolling].style.backgroundImage = "conic-gradient(#572dff 0% "+circledata+"%, #ebebeb "+circledata+"% 100%)"
                     circledata++
             }
             else clearInterval(skill3);
+        },10);  
+
+        // 7,8,9 번 그래프
+        var skill4 = window.setInterval(function(){
+            if(circledata <= 70){
+                // 처음엔 다 돌린다. 
+                for(var rolling = 6; rolling <= 8; rolling++)  
+                    datablock[rolling].style.backgroundImage = "conic-gradient(#572dff 0% "+circledata+"%, #ebebeb "+circledata+"% 100%)"
+                    circledata++
+            }
+            else clearInterval(skill4);
         },10);  
     },1000);
 };
